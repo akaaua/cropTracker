@@ -7,9 +7,26 @@ body{
     height: 100vh;
 }
 
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column;
+    height: 100vh;
+}
+
 #mostrar_imagem{
     width: 375px;
     height: 211px;
+    border: 1px solid black;
+    background-position: center;
+    background-size: cover;
+}
+
+#texto_descricao{
+    width: 375px;
+    height: 50px;
     border: 1px solid black;
     background-position: center;
     background-size: cover;

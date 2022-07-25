@@ -8,9 +8,28 @@
     <title>Crop Tracker</title>
 </head>
 <body>
-    <input type="file" id="imagem_enviada" accept="image/jpeg, image/png, image/jpg">
-    <div id="mostrar_imagem"></div>
-    <script src="script.js"></script>
-    <input type="text" id="texto_descricao">
+    <h1>Crop Tracker</h1>
+    <form action="script.js" method="post">
+        <label for="imagem_enviada">Imagem Enviada</label>
+        <input type="file" id="imagem_enviada" name="imagem_enviada" accept="image/jpeg, image/png, image/jpg">
+        <div id="mostrar_imagem"></div>
+        <label for="data_foto" >Data da Foto</label>
+        <input type="date" id="data_foto">
+        <label for="texto_descricao">Descrição da Foto</label>
+        <input type="text" id="texto_descricao" placeholder="Digite a descrição da imagem aqui" maxlength="100">
+        <div>
+            <label for="tipo_plantacao">Selecione o tipo de planta:</label>
+            <select id="tipo_plantacao" name="tipo de planta">
+                <option value="Milho">Milho</option>
+                <option value="Milho">Tomate</option>
+                <option value="Milho">Pimenta</option>
+            </select>
+        </div>
+        <div>
+            <input type="submit" value="Enviar informações">
+            <input type="reset" value="Limpar Formulário">
+        </div>
+        <script src="script.js"></script>
+    </form>
 </body>
 </html>
