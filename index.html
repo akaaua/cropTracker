@@ -10,7 +10,7 @@
 <body>
     <h1>Crop Tracker</h1>
     
-    <form action="script.js" method="post">
+    <form>
         
         <label for="imagem_enviada">Imagem Enviada</label>
         <div id="mostrar_imagem"></div>
@@ -23,12 +23,12 @@
             <label for="tipo_plantacao">Selecione o tipo de planta:</label>
             <select id="tipo_plantacao" name="tipo de planta">
                 <option value="Milho">Milho</option>
-                <option value="Milho">Tomate</option>
-                <option value="Milho">Pimenta</option>
+                <option value="Tomate">Tomate</option>
+                <option value="Pimenta">Pimenta</option>
             </select>
         </div>
         <div>
-            <input type="submit" value="Enviar informações">
+            <input type="submit" id="submeter_informacoes" value="Enviar informações">
             <input type="reset" value="Limpar Formulário">
         </div>
         <script src="script.js"></script>
