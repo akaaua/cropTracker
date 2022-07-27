@@ -7,31 +7,27 @@
     <link rel="stylesheet" href="style.css">
     <title>Crop Tracker</title>
 </head>
-<body>
+<body onload=preencheDados()>
     <h1>Crop Tracker</h1>
     
     <form>
         
-        <label for="imagem_enviada">Imagem Enviada</label>
-        <div id="mostrar_imagem"></div>
-        <!–<input type="file" id="imagem_enviada" name="imagem_enviada" accept="image/jpeg, image/png, image/jpg">
-        <label for="data_foto" >Data da Foto</label>
-        <input type="date" id="data_foto">
-        <label for="texto_descricao">Descrição da Foto</label>
-        <input type="text" id="texto_descricao" placeholder="Digite a descrição da imagem aqui" maxlength="100">
+        <label for="imagem_enviada_crop">Imagem Enviada</label>
+        <div id="mostrar_imagem_crop"></div>
+        <!–<input type="file" id="imagem_enviada_crop" name="imagem_enviada_crop" accept="image/jpeg, image/png, image/jpg">
+        <label for="data_foto_crop" >Data da Foto</label>
+        <input type="date" id="data_foto_crop">
+        <label for="texto_descricao_crop">Descrição da Foto</label>
+        <input type="text" id="texto_descricao_crop" placeholder="Digite a descrição da imagem aqui" maxlength="100">
         <div>
-            <label for="tipo_plantacao">Selecione o tipo de planta:</label>
-            <select id="tipo_plantacao" name="tipo de planta">
+            <label for="tipo_plantacao_crop">Selecione o tipo de planta:</label>
+            <select id="tipo_plantacao_crop" name="tipo de planta">
                 <option value="Milho">Milho</option>
                 <option value="Tomate">Tomate</option>
                 <option value="Pimenta">Pimenta</option>
             </select>
         </div>
-        <div>
-            <input type="submit" id="submeter_informacoes" value="Enviar informações">
-            <input type="reset" value="Limpar Formulário">
-        </div>
-        <!–<script src="script.js"></script>
+        <script src="preencheDados.js"></script>
     </form>
 </body>
 </html>

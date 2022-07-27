@@ -3,6 +3,7 @@ let imagem_carregada = '';
 let acaoBotao = document.getElementById("submeter_informacoes");
 
 
+// Recebe a imagem e inclui ela na página web
 imagem_enviada.addEventListener("change", function(){
     const leitor = new FileReader();
     leitor.addEventListener("load", () => {
@@ -15,6 +16,7 @@ imagem_enviada.addEventListener("change", function(){
 
 })
 
+// Pegar os itens preenchidos da página e adicionar eles ao localStorage
 acaoBotao.addEventListener("click", function(){
 
 
@@ -43,10 +45,4 @@ acaoBotao.addEventListener("click", function(){
     tipoPlanta.value = "";
 })
 
-function preencheCampos(){
 
-    document.getElementById("data_foto").value = JSON.parse(localStorage.getItem("dados_planta"))
-    document.getElementById("texto_descricao").value = JSON.parse(localStorage.auxRegistro.textoDescricao)
-    document.getElementById("tipo_plantacao").value = JSON.parse(localStorage.auxRegistro.tipoPlanta)
-
-}
