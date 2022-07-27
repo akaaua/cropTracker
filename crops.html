@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Crop Tracker</title>
 </head>
-<body onload=preencheDados()>
+<body onload=preencheDados('0')>
     <h1>Crop Tracker</h1>
     
     <form>
@@ -19,15 +19,16 @@
         <input type="date" id="data_foto_crop">
         <label for="texto_descricao_crop">Descrição da Foto</label>
         <input type="text" id="texto_descricao_crop" placeholder="Digite a descrição da imagem aqui" maxlength="100">
-        <div>
+        <div id="div_tipo">
             <label for="tipo_plantacao_crop">Selecione o tipo de planta:</label>
             <select id="tipo_plantacao_crop" name="tipo de planta">
                 <option value="Milho">Milho</option>
                 <option value="Tomate">Tomate</option>
                 <option value="Pimenta">Pimenta</option>
             </select>
+            <br>
         </div>
-        <script src="preencheDados.js"></script>
+        <script src="montaPagina.js"></script>
     </form>
 </body>
 </html>
