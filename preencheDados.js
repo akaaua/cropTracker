@@ -1,9 +1,5 @@
-let cropsCheck = document.getElementById("crops_link")
 
-
-
-
-// Preenchimento dos campos na tela - Em Andamento
+// Preenchimento dos campos na tela
 function preencheDados(){
     dados  = JSON.parse(localStorage.dados_planta)
     document.getElementById("data_foto_crop").value = dados[0].dataFoto
