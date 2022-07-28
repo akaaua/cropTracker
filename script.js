@@ -16,18 +16,19 @@ imagem_enviada.addEventListener("change", function(){
     })
     leitor.readAsDataURL(this.files[0]);
 
-    return urlImagem = `url(${imagem_carregada})`
+    
+    
+
 
 })
 
 // Pegar os itens preenchidos da página e adicionar eles ao localStorage
-acaoBotao.addEventListener("click", function(){
-
+acaoBotao.addEventListener("click", function(urlImagem){
 
     let dataFoto = document.getElementById("data_foto");
     let textoDescricao = document.getElementById("texto_descricao");
     let tipoPlanta = document.getElementById("tipo_plantacao");
-
+    
     let dadosLocais = JSON.parse(localStorage.getItem("dados_planta"));
     
     if(dadosLocais == null){
@@ -37,7 +38,7 @@ acaoBotao.addEventListener("click", function(){
     
     let auxRegistro ={
         
-        urlFoto: urlImagem,
+        urlFoto: urlImagem.value,
         dataFoto: dataFoto.value,
         textoDescricao: textoDescricao.value,
         tipoPlanta: tipoPlanta.value

@@ -47,6 +47,7 @@ function criaElemento(){
 // Preenchimento dos campos na tela
 function preencheDados(p1){
     dados  = JSON.parse(localStorage.dados_planta)
+    document.getElementById(`imagem${p1}`).value = dados[p1].urlFoto
     document.getElementById(`data${p1}`).value = dados[p1].dataFoto
     document.getElementById(`descricao${p1}`).value = dados[p1].textoDescricao
     document.getElementById(`tipo${p1}`).value = dados[p1].tipoPlanta
