@@ -1,5 +1,6 @@
 const imagem_enviada = document.querySelector("#imagem_enviada");
 let imagem_carregada = '';
+let urlImagem = '';
 let acaoBotao = document.getElementById("submeter_informacoes");
 
 
@@ -9,10 +10,13 @@ imagem_enviada.addEventListener("change", function(){
     leitor.addEventListener("load", () => {
         
         imagem_carregada = leitor.result;
+        
         document.querySelector("#mostrar_imagem").style.backgroundImage = `url(${imagem_carregada})`
         
     })
     leitor.readAsDataURL(this.files[0]);
+
+    return urlImagem = `url(${imagem_carregada})`
 
 })
 
@@ -31,7 +35,9 @@ acaoBotao.addEventListener("click", function(){
         dadosLocais = [];
     }
     
-    let auxRegistro ={ 
+    let auxRegistro ={
+        
+        urlFoto: urlImagem,
         dataFoto: dataFoto.value,
         textoDescricao: textoDescricao.value,
         tipoPlanta: tipoPlanta.value
@@ -40,6 +46,7 @@ acaoBotao.addEventListener("click", function(){
     dadosLocais.push(auxRegistro);
     localStorage.setItem("dados_planta", JSON.stringify(dadosLocais));
 
+    urlFoto.value = "";
     dataFoto.value = "";
     textoDescricao.value = "";
     tipoPlanta.value = "";
