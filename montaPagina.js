@@ -8,9 +8,9 @@ function criaElemento(){
     while (quantidade < dados.length) {
         let lineBreak = document.createElement("br")
 
-        let novaImagem = document.createElement('div');
+        let novaImagem = document.createElement('img');
         novaImagem.id = `imagem${quantidade}`
-        novaImagem.style = `background-image: ${dados[quantidade].urlFoto}`
+        novaImagem.src = `${dados[quantidade].urlFoto}`
         localizacaoElemento.appendChild(novaImagem)
         localizacaoElemento.appendChild(lineBreak)
         
@@ -40,6 +40,7 @@ function criaElemento(){
             
 
     }
+    
     
 }
 
