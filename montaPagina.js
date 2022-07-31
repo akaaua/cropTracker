@@ -44,7 +44,6 @@ function criaElemento(){
     
 }
 
-
 // Preenchimento dos campos na tela
 function preencheDados(p1){
     dados  = JSON.parse(localStorage.dados_planta)
