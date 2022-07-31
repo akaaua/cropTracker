@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Crop Tracker</title>
+    <script src="https://kit.fontawesome.com/2f7fdece72.js" crossorigin="anonymous"></script>
 </head>
-<body onload=criaElemento()>
+<body onload=criaElemento("Pimenta")>
     <h1>Crop Tracker</h1>
 
     
@@ -32,5 +33,50 @@
         </div>
         <script src="montaPagina.js"></script>
     </form>
+
+    <button class="sidebar-toggle">
+        <i class="fas fa-bars"></i>
+    </button>
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <img src="./images/logo.svg" class="logo" alt="">
+            <button class="close-btn">
+               <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <!-- links -->
+      <ul class="links">
+        <li>
+          <a href="index.html">home</a>
+        </li>
+        <li>
+          <a href="cropsPimenta.html">Pimenta</a>
+        </li>
+        <li>
+          <a href="cropsTomate.html">Tomate</a>
+        </li>
+        <li>
+          <a href="cropsMilho.html">Milho</a>
+        </li>
+      </ul>
+      <!-- social media -->
+      <ul class="social-icons">
+        <li>
+          <a href="https://www.facebook.com">
+            <i class="fab fa-facebook"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.twitter.com">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/akauacarvalho/">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </li>
+      </ul>
+    <script src="app.js"></script>
 </body>
 </html>
