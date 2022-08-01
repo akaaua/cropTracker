@@ -3,48 +3,50 @@ function criaElemento(tipoElemento){
     dados  = JSON.parse(localStorage.dados_planta);
     let quantidade = 0;
     let localizacaoElemento = document.getElementById('div_tipo')
-    
-    for (quantidade = 0; dados.length; quantidade++) {
-        while (tipoElemento == dados[quantidade].tipoPlanta) {
+    let counter = 0
+
+    dados.forEach(element => {
+
+        if(tipoElemento == element.tipoPlanta){
+            
             let lineBreak = document.createElement("br")
-    
+
             let novaImagem = document.createElement('img');
-            novaImagem.id = `imagem${quantidade}`
-            novaImagem.src = `${dados[quantidade].urlFoto}`
+            novaImagem.id = `imagem${counter}`
+            novaImagem.src = `${element.urlFoto}`
             localizacaoElemento.appendChild(novaImagem)
             localizacaoElemento.appendChild(lineBreak)
-            
-    
+
+
             let novaData = document.createElement('input');
-            novaData.id = `data${quantidade}`
-            novaData.type = "date"
+            novaData.id = `data${counter}`
+            novaData.type = 'date'
             localizacaoElemento.appendChild(novaData)
             localizacaoElemento.appendChild(lineBreak)
-            
-    
+
+
             let novaDescricao = document.createElement('input');
-            novaDescricao.id = `descricao${quantidade}`
+            novaDescricao.id = `descricao${counter}`
             novaDescricao.type = 'text'
             localizacaoElemento.appendChild(novaDescricao)
             localizacaoElemento.appendChild(lineBreak)
-    
+
             let novoTipo = document.createElement('input');
-            novoTipo.id = `tipo${quantidade}`
+            novoTipo.id = `tipo${counter}`
             novoTipo.type = 'text'
             localizacaoElemento.appendChild(novoTipo)
             localizacaoElemento.appendChild(lineBreak)
-    
-            preencheDados(quantidade)
 
-            quantidade++
-    
-            
-    
+            preencheDados(counter)
+
         }
+
+        counter++
         
-    }
-    
-    
+    })
+
+
+  
 
 }
 
