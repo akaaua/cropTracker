@@ -37,6 +37,14 @@ function criaElemento(tipoElemento){
             localizacaoElemento.appendChild(novoTipo)
             localizacaoElemento.appendChild(lineBreak)
 
+            let botaoDeletar = document.createElement('button');
+            botaoDeletar.setAttribute("onclick", `excluirElemento(${counter})`);
+            botaoDeletar.id = `deletar${counter}`
+            botaoDeletar.innerHTML = `Excluir`
+            botaoDeletar.className = `#botao_deletar`
+            localizacaoElemento.appendChild(botaoDeletar)
+            localizacaoElemento.appendChild(lineBreak)
+
             preencheDados(counter)
 
         }
@@ -58,5 +66,15 @@ function preencheDados(p1){
     document.getElementById(`descricao${p1}`).value = dados[p1].textoDescricao
     document.getElementById(`tipo${p1}`).value = dados[p1].tipoPlanta
 
+    return dados
+
 }
 
+function excluirElemento(posicao){
+    dados[posicao].urlFoto = ''
+    dados[posicao].dataFoto = ''
+    dados[posicao].textoDescricao = ''
+    dados[posicao].tipoPlanta = ''
+
+    localStorage.setItem("dados_planta", JSON.stringify(dados));
+}

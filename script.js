@@ -1,7 +1,7 @@
 const imagem_enviada = document.querySelector("#imagem_enviada");
 let imagem_carregada = '';
 let urlImagem = '';
-let acaoBotao = document.getElementById("submeter_informacoes");
+let botaoIncluir = document.getElementById("submeter_informacoes");
 
 
 // Recebe a imagem e inclui ela na página web
@@ -24,8 +24,10 @@ imagem_enviada.addEventListener("change", function(){
 
 })
 
+
+
 // Pegar os itens preenchidos da página e adicionar eles ao localStorage
-acaoBotao.addEventListener("click", function(){
+botaoIncluir.addEventListener("click", function(){
 
     //const leitor = new FileReader();
     //imagem_carregada = leitor.result;
@@ -57,5 +59,7 @@ acaoBotao.addEventListener("click", function(){
     textoDescricao.value = "";
     tipoPlanta.value = "";
 })
+
+
 
 
