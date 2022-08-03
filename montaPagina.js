@@ -45,6 +45,14 @@ function criaElemento(tipoElemento){
             localizacaoElemento.appendChild(botaoDeletar)
             localizacaoElemento.appendChild(lineBreak)
 
+            let botaoAtualizar = document.createElement('button');
+            botaoAtualizar.setAttribute("onclick", `atualizarElemento(${counter})`);
+            botaoAtualizar.id = `atualizar${counter}`
+            botaoAtualizar.innerHTML = `Atualizar`
+            botaoAtualizar.className = `#botao_atualizar`
+            localizacaoElemento.appendChild(botaoAtualizar)
+            localizacaoElemento.appendChild(lineBreak)
+
             preencheDados(counter)
 
         }
@@ -77,4 +85,19 @@ function excluirElemento(posicao){
     dados[posicao].tipoPlanta = ''
 
     localStorage.setItem("dados_planta", JSON.stringify(dados));
+}
+
+function atualizarElemento(posicao){
+    
+    window.open('index.html');
+    preencheDados(posicao);
+    
+    /* 
+    dados[posicao].urlFoto = ''
+    dados[posicao].dataFoto = ''
+    dados[posicao].textoDescricao = ''
+    dados[posicao].tipoPlanta = ''
+
+    localStorage.setItem("dados_planta", JSON.stringify(dados)); 
+    */
 }
