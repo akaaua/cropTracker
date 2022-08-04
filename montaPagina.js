@@ -78,6 +78,19 @@ function preencheDados(p1){
 
 }
 
+function preencheDadosUpdate(p1){
+    
+    //document.getElementsByTagName('body').onload = `preencheDadosUpdate(${elemento})`
+    dados  = JSON.parse(localStorage.dados_planta)
+    document.getElementById(`mostrar_imagem_update`).value = dados[p1].urlFoto
+    document.getElementById(`data_foto_update`).value = dados[p1].dataFoto
+    document.getElementById(`texto_descricao_update`).value = dados[p1].textoDescricao
+    document.getElementById(`tipo_plantacao_update`).value = dados[p1].tipoPlanta
+
+    return dados
+
+}
+
 function excluirElemento(posicao){
     dados[posicao].urlFoto = ''
     dados[posicao].dataFoto = ''
@@ -87,17 +100,21 @@ function excluirElemento(posicao){
     localStorage.setItem("dados_planta", JSON.stringify(dados));
 }
 
-function atualizarElemento(posicao){
+/* function atualizarElemento(elemento){
     
-    window.open('index.html');
-    preencheDados(posicao);
+
+    window.open('atualizaElemento.html');
     
-    /* 
+    return preencheDadosUpdate(elemento)
+    
+    
+    
     dados[posicao].urlFoto = ''
     dados[posicao].dataFoto = ''
     dados[posicao].textoDescricao = ''
     dados[posicao].tipoPlanta = ''
 
     localStorage.setItem("dados_planta", JSON.stringify(dados)); 
-    */
-}
+    
+}*/
+

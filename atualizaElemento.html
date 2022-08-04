@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Crop Tracker</title>
+    <script src="https://kit.fontawesome.com/2f7fdece72.js" crossorigin="anonymous"></script>
+</head>
+<body onload="preencheDadosUpdate(elemento)">
+    <h1>Crop Tracker</h1>
+    
+    <form>
+        
+        <label for="imagem_enviada_update">Imagem Enviada</label>
+        <div id="mostrar_imagem_update"></div>
+        <input type="file" id="imagem_enviada_update" name="imagem_enviada" accept="image/jpeg, image/png, image/jpg">
+        <label for="data_foto_update" >Data da Foto</label>
+        <input type="date" id="data_foto_update">
+        <label for="texto_descricao_update">Descrição da Foto</label>
+        <input type="text" id="texto_descricao_update" placeholder="Digite a descrição da imagem aqui" maxlength="100">
+        <div>
+            <label for="tipo_plantacao_update">Selecione o tipo de planta:</label>
+            <select id="tipo_plantacao_update" name="tipo de planta">
+                <option value="Milho">Milho</option>
+                <option value="Tomate">Tomate</option>
+                <option value="Pimenta">Pimenta</option>
+            </select>
+        </div>
+        <div>
+            <input type="submit" id="submeter_informacoes" value="Enviar informações">
+            <input type="reset" value="Limpar Formulário">
+        </div>
+    </form>
+
+    <button class="sidebar-toggle">
+        <i class="fas fa-bars"></i>
+    </button>
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <img src="./images/logo.svg" class="logo" alt="">
+            <button class="close-btn">
+               <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <!-- links -->
+      <ul class="links">
+        <li>
+          <a href="index.html">home</a>
+        </li>
+        <li>
+          <a href="cropsPimenta.html">Pimenta</a>
+        </li>
+        <li>
+          <a href="cropsTomate.html">Tomate</a>
+        </li>
+        <li>
+          <a href="cropsMilho.html">Milho</a>
+        </li>
+      </ul>
+      <!-- social media -->
+      <ul class="social-icons">
+        <li>
+          <a href="https://www.facebook.com">
+            <i class="fab fa-facebook"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.twitter.com">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/akauacarvalho/">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </li>
+      </ul>
+    <script src="app.js"></script>
+    <script src="montaPagina.js"></script>
+</body>
+</html>
