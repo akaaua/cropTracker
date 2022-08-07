@@ -1,4 +1,5 @@
 var elemento = ''
+botaoAtualizarEvent = document.getElementsByClassName('#botao_atualizar')
 
 function criaElemento(tipoElemento){
     dados  = JSON.parse(localStorage.dados_planta);
@@ -39,7 +40,7 @@ function criaElemento(tipoElemento){
             localizacaoElemento.appendChild(lineBreak)
 
             let botaoDeletar = document.createElement('button');
-            botaoDeletar.setAttribute("onclick", `excluirElemento(${counter})`);
+            botaoDeletar.setAttribute("onclick", `atualizaElemento(${counter})`);
             botaoDeletar.id = `deletar${counter}`
             botaoDeletar.innerHTML = `Excluir`
             botaoDeletar.className = `#botao_deletar`
@@ -47,11 +48,11 @@ function criaElemento(tipoElemento){
             localizacaoElemento.appendChild(lineBreak)
 
             let botaoAtualizar = document.createElement('button');
-            botaoAtualizar.setAttribute("onclick", `excluirElemento(${counter})`);
+            botaoAtualizar.setAttribute("onclick", `atualizaElemento(${counter})`);
             botaoAtualizar.id = `atualizar${counter}`
             botaoAtualizar.innerHTML = `Atualizar`
             botaoAtualizar.className = `#botao_atualizar`
-            botaoAtualizar.formAction = `index.html`
+            botaoAtualizar.formAction = `atualizaElemento.html`
             localizacaoElemento.appendChild(botaoAtualizar)
             localizacaoElemento.appendChild(lineBreak)
 
@@ -80,6 +81,30 @@ function preencheDados(p1){
 
 }
 
+function preencheDadosUpdate(p1){
+   
+    
+    let pegaPagina = document.getElementById(`update`)
+
+    pegaPagina.addEventListener("onload", function(p1){
+        dados  = JSON.parse(localStorage.dados_planta)
+        console.log(dados)
+        document.getElementById(`mostrar_imagem_update`).value = dados[p1].urlFoto
+        document.getElementById(`data_foto_update`).value = dados[p1].dataFoto
+        document.getElementById(`texto_descricao_update`).value = dados[p1].textoDescricao
+        document.getElementById(`tipo_plantacao_update`).value = dados[p1].tipoPlanta
+        console.log("passou aqui no preenchedados")
+        return dados
+    
+    })
+
+    
+
+    // debugger
+    
+
+}
+
 function excluirElemento(posicao){
     dados[posicao].urlFoto = ''
     dados[posicao].dataFoto = ''
@@ -89,4 +114,24 @@ function excluirElemento(posicao){
     localStorage.setItem("dados_planta", JSON.stringify(dados));
 }
 
+botaoAtualizarEvent.addEventListener("click", function(p1){
 
+    dados  = JSON.parse(localStorage.dados_planta)
+    console.log(dados)
+    document.getElementById(`mostrar_imagem_update`).value = dados[p1].urlFoto
+    document.getElementById(`data_foto_update`).value = dados[p1].dataFoto
+    document.getElementById(`texto_descricao_update`).value = dados[p1].textoDescricao
+    document.getElementById(`tipo_plantacao_update`).value = dados[p1].tipoPlanta
+    console.log("passou aqui no preenchedados")
+    return dados
+})
+
+
+
+function atualizaElemento(id){
+    
+    // window.location('atualizaElemento.html')
+    console.log("passou aqui no atualiza", id)
+    preencheDadosUpdate(id)
+
+}

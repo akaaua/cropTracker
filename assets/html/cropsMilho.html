@@ -4,42 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <title>Crop Tracker</title>
     <script src="https://kit.fontawesome.com/2f7fdece72.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body onload=criaElemento("Milho")>
     <h1>Crop Tracker</h1>
+
     
     <form>
         
-        <label for="imagem_enviada_update">Imagem Enviada</label>
-        <div id="mostrar_imagem_update"></div>
-        <input type="file" id="imagem_enviada_update" name="imagem_enviada" accept="image/jpeg, image/png, image/jpg">
-        <label for="data_foto_update" >Data da Foto</label>
-        <input type="date" id="data_foto_update">
-        <label for="texto_descricao_update">Descrição da Foto</label>
-        <input type="text" id="texto_descricao_update" placeholder="Digite a descrição da imagem aqui" maxlength="100">
-        <div>
-            <label for="tipo_plantacao_update">Selecione o tipo de planta:</label>
-            <select id="tipo_plantacao_update" name="tipo de planta">
+        <label for="imagem_enviada_crop">Imagem Enviada</label>
+        <div id="mostrar_imagem_crop"></div>
+        <input type="file" id="imagem_enviada_crop" name="imagem_enviada_crop" accept="image/jpeg, image/png, image/jpg">
+        <label for="data_foto_crop" >Data da Foto</label>
+        <input type="date" id="data_foto_crop">
+        <label for="texto_descricao_crop">Descrição da Foto</label>
+        <input type="text" id="texto_descricao_crop" placeholder="Digite a descrição da imagem aqui" maxlength="100">
+        
+        <div id="div_tipo">
+            <label for="tipo_plantacao_crop">Selecione o tipo de planta:</label>
+            <select id="tipo_plantacao_crop" name="tipo de planta">
                 <option value="Milho">Milho</option>
                 <option value="Tomate">Tomate</option>
                 <option value="Pimenta">Pimenta</option>
-            </select>
+                </select>
+            <br>
         </div>
-        <div>
-            <input type="submit" id="submeter_informacoes" value="Enviar informações">
-            <input type="reset" value="Limpar Formulário">
-        </div>
+        <script src="../js/montaPagina.js"></script>
     </form>
-
     <button class="sidebar-toggle">
         <i class="fas fa-bars"></i>
     </button>
     <aside class="sidebar">
         <div class="sidebar-header">
-            <img src="./images/logo.svg" class="logo" alt="">
+            <img src="../images/logo.svg" class="logo" alt="">
             <button class="close-btn">
                <i class="fas fa-times"></i>
             </button>
@@ -47,16 +46,16 @@
         <!-- links -->
       <ul class="links">
         <li>
-          <a href="index.html">home</a>
+          <a href="../../index.html">home</a>
         </li>
         <li>
-          <a href="cropsPimenta.html">Pimenta</a>
+          <a href="../html/cropsPimenta.html">Pimenta</a>
         </li>
         <li>
-          <a href="cropsTomate.html">Tomate</a>
+          <a href="../html/cropsTomate.html">Tomate</a>
         </li>
         <li>
-          <a href="cropsMilho.html">Milho</a>
+          <a href="../html/cropsMilho.html">Milho</a>
         </li>
       </ul>
       <!-- social media -->
@@ -77,7 +76,6 @@
           </a>
         </li>
       </ul>
-    <script src="app.js"></script>
-    <script src="montaPagina.js"></script>
+    <script src="../js/app.js"></script>
 </body>
 </html>

@@ -12,7 +12,7 @@ Some clues to follow for future development
 
 
 <p align="center">
-    <img width="400" src="./images/cropTrackerPrototype.jpg" alt="Crop Tracker Prototype">
+    <img width="400" src="assets\images\logo.svg" alt="Crop Tracker Prototype">
 </p>
 <p align="center">
     https://miro.com/app/board/uXjVOjpk-wM=/?share_link_id=235138076999
