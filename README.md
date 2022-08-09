@@ -41,5 +41,5 @@ Some clues to follow for future development
 
 ## Knowledge
 
-With this project i was able to learn how to localStorage works in JS, manipulate DOM elements and create dinamic HTML code.
+With this project i was able to learn how the localStorage works in JS, manipulate DOM elements and create dinamic HTML code.
 
