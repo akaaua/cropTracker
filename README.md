@@ -2,7 +2,7 @@
 
 It helps following the crops you have along the time, upload your pics, enter the day it was taken and a message about it, this way you can follow your plants growth and health.
 
-See it in [Live](https://62f015da6dd436422d9735bf--regal-puppy-8dd748.netlify.app/) 
+See it [Live](https://62f015da6dd436422d9735bf--regal-puppy-8dd748.netlify.app/) 
 
 ## Objectives
 
